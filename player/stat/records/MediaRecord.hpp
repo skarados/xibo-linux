@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Record.hpp"
+#include <memory>
 
 namespace Stats
 {

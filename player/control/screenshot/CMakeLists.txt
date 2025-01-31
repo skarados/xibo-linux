@@ -5,7 +5,7 @@ add_library(${PROJECT_NAME}
     ScreenShoter.hpp
     ScreenShotInterval.cpp
     ScreenShotInterval.hpp
-    ScreeShoterFactory.hpp
+    ScreenShoterFactory.hpp
 )
 
 target_link_libraries(${PROJECT_NAME}

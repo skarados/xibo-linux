@@ -3,6 +3,7 @@
 #include "Container.hpp"
 #include "MediaRecord.hpp"
 #include "Record.hpp"
+#include <memory>
 
 namespace Stats
 {

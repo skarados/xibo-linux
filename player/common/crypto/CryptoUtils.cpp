@@ -70,10 +70,15 @@ std::string CryptoUtils::decryptRc4(const std::string& message, const std::strin
 
 std::string CryptoUtils::toBase64(const std::string& text)
 {
-    return boost::beast::detail::base64_encode(text);
+    std::string base64;
+    base64.resize(boost::beast::detail::base64::encode((void*)&base64[0], (const void*)(text.c_str()), text.size()));
+    return base64;
 }
 
 std::string CryptoUtils::fromBase64(const std::string& text)
 {
-    return boost::beast::detail::base64_decode(text);
+    std::string base64;
+    base64.resize(boost::beast::detail::base64::encode((void*)&base64[0], (const void*)(text.c_str()), text.size()));
+    // base64.resize(boost::beast::detail::base64::encode((void*)&base64[0], (const void*)text));
+    return base64;
 }

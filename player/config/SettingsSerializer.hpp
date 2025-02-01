@@ -1,5 +1,6 @@
 #pragma once
 
+#include "common/Field.hpp"
 #include "common/NamedField.hpp"
 #include "common/PlayerRuntimeError.hpp"
 #include "common/parsing/XmlDefaultFileHandler.hpp"
@@ -24,13 +25,12 @@ protected:
     template <typename... Args>
     void loadFromImpl(const XmlNode& tree, Args&... fields)
     {
+        
         using namespace std::string_literals;
-
         try
         {
             auto root = tree.get_child(RootNode);
-//            int allfields = fields.size();
-            (loadField(root, fields, std::make_index_sequence<fields.size()>{}), ...);
+            (loadField(root, fields, std::make_index_sequence<fields.template size()>{}), ...);
         }
         catch (std::exception& e)
         {

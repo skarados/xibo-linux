@@ -48,7 +48,7 @@ void ScreenShotInterval::takeScreenShot()
 void ScreenShotInterval::submitScreenShot(const std::string& screenShot)
 {
 //    std::string future = "spdlog-future";
-    submitScreenShot(screenShot);
+//    submitScreenShot(screenShot);
 //        if (!sender_.first)
 //        {
 //            Log::error("[XMDS::SubmitScreenShot] {}", sender_.first);
